@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color.DarkGray)
+                        .background(Color.White)
                         .padding(16.dp)
                 ) {
                     Column(
@@ -50,9 +50,9 @@ class MainActivity : ComponentActivity() {
                                 .fillMaxWidth()
                                 .padding(vertical = 32.dp),
                             fontWeight = FontWeight.Light,
-                            fontSize = 80.sp,
-                            color = Color.White,
-                            maxLines = 2
+                            fontSize = 50.sp,
+                            color = Color.Blue,
+                            maxLines = 4
                         )
                         Row(
                             modifier = Modifier
@@ -63,11 +63,12 @@ class MainActivity : ComponentActivity() {
                                 symbol = "AC",
                                 color = LightGray,
                                 modifier = Modifier
-                                    .aspectRatio(2f)
-                                    .weight(2f)
+                                    .aspectRatio(1f)
+                                    .weight(1f)
                             ) {
                                 viewModel.onAction(CalculatorAction.Clear)
                             }
+
                             CalculatorButton(
                                 symbol = "Del",
                                 color = LightGray,
@@ -77,6 +78,16 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 viewModel.onAction(CalculatorAction.Delete)
                             }
+                            CalculatorButton(
+                                symbol = " % ",
+                                color = Orange,
+                                modifier = Modifier
+                                    .aspectRatio(1f)
+                                    .weight(1f)
+                            ) {
+                                viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Modulo))
+                            }
+
                             CalculatorButton(
                                 symbol = "/",
                                 color = Orange,
@@ -222,10 +233,20 @@ class MainActivity : ComponentActivity() {
                                 symbol = "0",
                                 color = MediumGray,
                                 modifier = Modifier
-                                    .aspectRatio(2f)
-                                    .weight(2f)
+                                    .aspectRatio(1f)
+                                    .weight(1f)
                             ) {
                                 viewModel.onAction(CalculatorAction.Number(0))
+                            }
+                            // adding double 00
+                            CalculatorButton(
+                                symbol = "^",
+                                color = MediumGray,
+                                modifier = Modifier
+                                    .aspectRatio(1f)
+                                    .weight(1f)
+                            ) {
+                                viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Power))
                             }
                             CalculatorButton(
                                 symbol = ".",

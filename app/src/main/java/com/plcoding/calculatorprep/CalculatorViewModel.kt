@@ -35,6 +35,8 @@ class CalculatorViewModel: ViewModel() {
                 is CalculatorOperation.Subtract -> number1 - number2
                 is CalculatorOperation.Multiply -> number1 * number2
                 is CalculatorOperation.Divide -> number1 / number2
+                is CalculatorOperation.Modulo -> number1 % number2
+                is CalculatorOperation.Power -> Math.pow(number1,number2)
                 null -> return
             }
             state = state.copy(
@@ -91,6 +93,6 @@ class CalculatorViewModel: ViewModel() {
     }
 
     companion object {
-        private const val MAX_NUM_LENGTH = 8
+        private const val MAX_NUM_LENGTH = 25
     }
 }
