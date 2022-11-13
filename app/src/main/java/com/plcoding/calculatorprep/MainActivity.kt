@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
                             fontWeight = FontWeight.Light,
                             fontSize = 50.sp,
                             color = Color.Blue,
-                            maxLines = 4
+                            maxLines = 2,
                         )
                         Row(
                             modifier = Modifier
