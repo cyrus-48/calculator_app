@@ -8,3 +8,8 @@ calculator app using jetpack compose
 ![alt text](app/src/main/res/drawable/image3.png)
 ![alt text](app/src/main/res/drawable/image4.png)
 ![alt text](app/src/main/res/drawable/image5.png)
+
+`// Dart code snippet
+void main() {
+print('Hello, world!');
+}`
