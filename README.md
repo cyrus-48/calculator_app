@@ -3,4 +3,7 @@
 calculator app using jetpack compose
 
 ## images 
-![alt text](res/drawable/image1.png)
+![alt text](app/src/main/res/drawable/image1.png)
+![alt text](app/src/main/res/drawable/image2.png)
+![alt text](app/src/main/res/drawable/image3.png)
+![alt text](app/src/main/res/drawable/image4.png)
